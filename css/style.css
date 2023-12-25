@@ -59,7 +59,6 @@ body {
 	margin: 0;
 	padding: 0;
 	min-width: 340px;
-	overflow-x: hidden;
 
 	font-family: "Inter", sans-serif;
 	font-size: 16px;
@@ -83,6 +82,10 @@ body {
 	overflow: hidden;
 }
 
+.main {
+	overflow-x: hidden;
+}
+
 .title, 
 .text {
 	margin: 0;
@@ -102,11 +105,6 @@ body {
 a {
 	text-decoration: none;
 	color: inherit;
-}
-
-a:hover,
-a:active {
-	text-decoration: underline;
 }
 
 img {
@@ -142,6 +140,17 @@ strong {
 	border-top: 1px solid rgba(255,255,255, 0.6);
 	border-right: 1px solid rgba(255,255,255, 0.6);
 	border-radius: var(--rounded);
+
+	transition: transform .5s ease-in-out, box-shadow .5s ease-out;
+}
+
+.button:hover, .button:focus-visible, .button:focus {
+	transform: scale(1.05) translateY(-3px);
+	box-shadow: 0 10px 20px 0 rgba(0,0,0,0.5);
+}
+.button:active {
+	transform: scale(1) translateY(3px);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.5);
 }
 
 .section {
@@ -150,7 +159,9 @@ strong {
 	position: relative;
 }
 
-*::before {
+.section::before,
+.faq-list::before,
+.hero .decor::before {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -357,12 +368,10 @@ strong {
 	content: "";
 	position: absolute;
 	z-index: -1;
-	top: 0;
-	bottom: -250px;
-	width: 454px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+	top: -50px;
+	bottom: -200px;
+	left: -15px;
+	right: -15px;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='854' height='1386' fill='none'%3E%3Cg filter='url(%23a)'%3E%3Cellipse cx='427' cy='693' fill='%239814D6' rx='227' ry='493'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='a' width='854' height='1386' x='0' y='0' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_66_196' stdDeviation='100'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
 
 }
@@ -380,20 +389,12 @@ strong {
     padding: 15px;
     width: 100%;
     color: inherit;
-
-
     border-radius: var(--rounded);
     outline-color: var(--base-text);
     outline-offset: 3px;
     background-color: var(--title-base);
     transition: 0.4s;
 		box-shadow: inset 1px 1px 5px 0 var(--lighter-base);
-}
-
-.accordion:hover,
-.accordion:active,
-.accordeon:focus-visible {
-    background-color: var(--lighter-base);
 }
 
 .button-name {

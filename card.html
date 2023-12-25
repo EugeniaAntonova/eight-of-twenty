@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		article.card {
+			position: relative;
+			width: 265px;
+			height: 240px;
+			border-radius: 16px;
+			background-color: rgba(78, 0, 115, 1);
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-image: radial-gradient(82.11% 39.72% at 48.87% 43.93%, #9814D6 0%, #3A0055 100%);
+		}
+
+		img {
+			display: inline-block;
+		}
+
+		img.ball {
+			position: absolute;
+			z-index: 1;
+		}
+
+		img.wave {
+			display: block;
+			position: absolute;
+			inset: 0;
+			margin: auto;
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<article class="card">
+			<span class="tag">Акция</span>
+			<picture>
+				<source srcset="assets/img/ball8.png">
+				<img class="ball ball8" width="120" height="120" src="/assets/img/ball8.webp" aria-hidden="true">
+			</picture>
+			<picture>
+				<source srcset="/assets/img/ball5.png">
+				<img class="ball ball5" width="55" height="auto" src="/assets/img/ball5.webp" aria-hidden="true">
+			</picture>
+			<picture>
+				<source srcset="/assets/img/ball5.png">
+				<img class="ball ball5" width="67" height="auto" src="/assets/img/ball5.webp" aria-hidden="true">
+			</picture>
+			<picture>
+				<source srcset="/assets/img/ball3.png">
+				<img class="ball ball3" width="88" height="92" src="/assets/img/ball3.webp" aria-hidden="true">
+			</picture>
+			<img class="wave" width="72" src="/assets/img/circle-wave.svg" aria-hidden="true">
+			<img class="wave" width="106" src="/assets/img/circle-wave.svg" aria-hidden="true">
+			<img class="wave" width="150" src="/assets/img/circle-wave.svg" aria-hidden="true">
+			<img class="wave" width="212" src="/assets/img/circle-wave.svg" aria-hidden="true">
+			<img class="wave" width="278" src="/assets/img/circle-wave.svg" aria-hidden="true">
+			<h2 class="title">
+				Беспроигрышный<br>тираж
+			</h2>
+			<picture>
+				<source srcset="#">
+				<img class="logo" src="#" height="40" width="64" alt="логотип супер лото">
+			</picture>
+			<span class="price">по <strong>500 ₸</strong></span>
+		</article>
+	</main>
+</body>
+</html>
