@@ -25,12 +25,12 @@ from {
 @keyframes wobble {
 	from {
 		transform: rotate(0deg)
-							 translate(-4px)
+							 translate(-2px)
 							 rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg)
-							 translate(-4px)
+							 translate(-2px)
 							 rotate(-360deg);
 }
 }
@@ -114,8 +114,10 @@ from {
 		.ball.ball3 {
 			right: -65px;
 			bottom: 53px;
+		}
+		
+		.card.move .ball.ball3{	
 			transform: translatex(100px);	
-			
 			animation-name: slide-in, wobble;
 			animation-duration: 0.5s, 2s;
 			animation-timing-function: ease-in, linear;
@@ -130,8 +132,10 @@ from {
 			left: -31px;
 			bottom: 64px;
 			width: 70px;
+		}
+		
+		.card.move .ball.ball5[width="55"] {
 			transform: translatex(-100px);
-
 			animation-name: slide-in, wobble;
 			animation-duration: 0.5s, 2s;
 			animation-timing-function: ease-in, linear;
@@ -144,8 +148,10 @@ from {
 			left: 94px;
 			bottom: -36px;
 			width: 83px;
+		}
+		
+		.card.move .ball.ball5[width="67"]{
 			transform: translateY(100px);
-
 			animation-name: slide-in, wobble;
 			animation-duration: 0.5s, 2s;
 			animation-timing-function: ease-in, linear;
@@ -158,8 +164,10 @@ from {
 		.ball.ball8 {
 			left: 54px;
 			top: -79px;
+		}
+		
+		.card.move .ball.ball8 {
 			transform: translateY(-100px);
-
 			animation-name: slide-in, wobble;
 			animation-duration: 0.5s, 2s;
 			animation-timing-function: ease-in, linear;
@@ -173,9 +181,11 @@ from {
 			position: absolute;
 			inset: 0;
 			margin: auto;
-
-			transform: scale(0);
 			transition: transform .3s ease;
+		}
+		
+		.card.move img.wave {	
+			transform: scale(0);
 			animation-name: rotate-in, jumping;
 			animation-duration: 0.5s, 2s;
 			animation-delay: 0s, 0.5s;
@@ -189,10 +199,14 @@ from {
 			width: 350px;
 			position: absolute;
 			z-index: 2;
-			transform: rotate(7deg) scale(0);
+			transform: rotate(7deg);
 			left: -36px;
 			top: -64px;
 			transition: transform .3s ease;
+		}
+		
+		.card.move .shield {
+			transform: rotate(-360deg) scale(0);
 			animation-name: rotate-in, bounce;
 			animation-duration: 0.5s, 2s;
 			animation-timing-function: ease-in, linear;
@@ -210,9 +224,12 @@ from {
 			z-index: 3;
 			top: 115px;
 			left: 73px;
-			transform: rotate(-9deg) scale(0);
+			transform: rotate(-9deg);
 			transition: transform .3s ease;
-
+		}
+		
+		.card.move .title {
+			transform: scale(0);
 			animation-name: scale-in;
 			animation-duration: 0.5s;
 			animation-timing-function: ease-in;
@@ -221,12 +238,16 @@ from {
 			animation-fill-mode: forwards;
 		}
 
-		.logo	{
+		.logo {
 			position: absolute;
 			left: 15px;
 			bottom: 15px;
+			transition: transform .5s ease;
+			
+		}
+		
+		.card.move .logo{	
 			transform: translatex(-100px);
-
 			animation-name: slide-in;
 			animation-duration: 0.5s;
 			animation-timing-function: ease-in;
@@ -268,5 +289,26 @@ from {
 				<img class="logo" src="/assets/img/card-logo.png" height="40" width="64" alt="логотип супер лото">
 		</article>
 	</main>
+
+	<script>
+		const card = document.querySelector('.card');
+		const startAnimation = () => {
+			card.classList.add('move');
+		}
+
+		const stopAnimation = () => {
+			card.classList.remove('move');
+		}
+
+		const animationControls = () => {
+			startAnimation();
+			setTimeout(() => {
+				stopAnimation()
+			}, 8000);
+		}
+
+		animationControls();
+		setInterval(() => {animationControls()}, 8050)
+	</script>
 </body>
 </html>
