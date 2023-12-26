@@ -241,6 +241,14 @@ strong {
 	margin-top: 85px;
 }
 
+.shield {
+	position: absolute;
+	transform: rotate(-20.62deg);
+	transform-origin: left bottom;
+	top: -15px;
+	left: 25px;
+}
+
 .ball,
 .wave {
 	position: absolute;
@@ -590,6 +598,11 @@ strong {
 	.hero .decor .three {
 		bottom: -80px;
 		left: -250px;
+	}
+
+	.hero .decor .shield {
+		top: -90px;
+		left: 60px;
 	}
 
 }
