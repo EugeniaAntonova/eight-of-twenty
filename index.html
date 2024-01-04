@@ -1,179 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-		<link rel="stylesheet" href="/css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/css/index-style.css">
+	<!-- <link rel="stylesheet" href="/css/style.css"> -->
+	<style>
+		section.hero {
+			position: relative;
+		}
+		section.hero .ball {
+			position: absolute;
+			top: 30%;
+			left: -2%;
+		}
+
+		section.terms {
+			position: relative;
+		}
+
+		section.terms .ball {
+			position: absolute;
+			top: 20%;
+			right: -30%;
+		}
+
+		@media (min-width: 1024px) {
+
+		}
+	</style>
 </head>
+
 <body>
-    <main class="main">
-        <section class="section hero">
-					<div class="wrapper">
-						<div class="decor">
-							<picture>
-								<source media="(min-width:1024px)" srcset="/assets/img/ball8-big.webp" width="180" type="image/webp">
-								<source media="(min-width:1024px)" srcset="/assets/img/ball8-big.png" width="180">
-								<source srcset="/assets/img/ball8.png">
-								<img class="ball eight" src="/assets/img/ball8.webp" aria-hidden="true" width="75">
-							</picture>
-							<picture>
-								<source media="(min-width:1024px)" srcset="/assets/img/ball5-big.webp" width="136" type="image/webp">
-								<source media="(min-width:1024px)" srcset="/assets/img/ball5-big.png" width="136">
-								<source srcset="/assets/img/ball5.png">
-								<img class="ball five" src="/assets/img/ball5.webp" aria-hidden="true" width="64">
-							</picture>
-							<picture>
-								<source media="(min-width:1024px)" srcset="/assets/img/ball3-big.webp" width="266" type="image/webp">
-								<source media="(min-width:1024px)" srcset="/assets/img/ball3-big.png" width="266">
-								<source srcset="/assets/img/ball3.png">
-								<img class="ball three" src="/assets/img/ball3.webp" aria-hidden="true" width="56">
-							</picture>
-							<div class="logo-wrapper">
-								<div class="waves">
-									<img class="wave" id="wave1" src="/assets/img/wave.svg" aria-hidden="true">
-									<img class="wave" id="wave2" src="/assets/img/wave.svg" aria-hidden="true">
-									<img class="wave" id="wave3" src="/assets/img/wave.svg" aria-hidden="true">
-									<img class="wave" id="wave4" src="/assets/img/wave.svg" aria-hidden="true">
-									<img class="wave" id="wave5" src="/assets/img/wave.svg" aria-hidden="true">
-									<img class="wave" id="wave6" src="/assets/img/wave.svg" aria-hidden="true">
-								</div>
-								<picture>
-									<source media="(min-width: 1024px)" width="446" srcset="/assets/img/shield-big.webp" type="image/webp">
-									<source media="(min-width: 1024px)" width="446" srcset="/assets/img/shield-big.png">
-									<source srcset="/assets/img/shield.png">
-									<img class="shield" src="/assets/img/shield.webp" width="163" alt="тираж номер 302">
-								</picture>
-								<picture>
-									<source media="(min-width:1024px)" srcset="/assets/img/Logo-big.webp" width="700" type="image/webp">
-									<source media="(min-width:1024px)" srcset="/assets/img/Logo-big.png" width="700">
-									<source srcset="/assets/img/Logo.png" type="image/">
-									<img class="logo" src="/assets/img/Logo.webp" alt="LOTO 8/20" width="285" height="auto">
-								</picture>
-							</div>
-						</div>
-						<div>
-							<h1 class="title main-title">
-									Беспроигрышный тираж&nbsp;8/20
-							</h1>
-							<p class="descr">
-									<time datetime="2024-01-09 10:00">9&nbsp;января&nbsp;2024</time>
-										проводим <strong>БЕСПРОИГРЫШНЫЙ ТИРАЖ</strong>. Все билеты, участвующие в&nbsp;тираже получат выигрыш. Покупай билеты на&nbsp;беспроигрышный тираж c&nbsp;3&nbsp;по&nbsp;2&nbsp;января.
-							</p>
-						</div>
-					</div>
-        </section>
-        <section class="section terms">
-					<div class="wrapper">
-						<div class="section-title-wrapper">
-							<h2 class="title section-title">
-									Условия акции:
-							</h2>
-						</div>
-            <ul class="list">
-                <li>Купите билет 8/20 на 302 тираж, 9 января.</li>
-                <li>Больше билетов, больше выигрышей!</li>
-            </ul>
-            <a href="" class="button">Купить билет</a>
-					</div>
-        </section>
-        <section class="section faq">
-					<div class="wrapper">
-						<div class="section-title-wrapper">
-							<h2 class="title section-title">
-									Часто задаваемые вопросы:     
-							</h2>
-						</div>
-							<ul class="list faq-list">
-								<li>
-								<button class="accordion" aria-controls="section-1">
-										<span class="secondary-title button-name" role="heading" aria-level="3">
-												Нужно ли регистрировать билеты для&nbsp;участия беспроигрышном тираже?
-										</span>
-										<span class="cross"></span>
-								</button>
-								<div class="panel" id="section-1">
-										<p class="text faq-text">
-												Для участия в&nbsp;беспроигрышном тираже регистрация не&nbsp;требуется.
-										</p>
-								</div>
-								</li>                
-								<li>
-								<button class="accordion" aria-controls="section-2">
-										<span class="secondary-title button-name" role="heading" aria-level="3">
-												Как получить выигрыш?
-										</span>
-										<span class="cross"></span>
-								</button>
-								<div class="panel" id="section-2">
-										<p class="text faq-text">
-												Вам необходимо обраться в&nbsp;контакт-центр по&nbsp;тел.&nbsp;<a href="tel:+77000805200" class="link" title="позвонить">8 800 080 52 00</a>, вам подскажут, где получить выигрыш и&nbsp;какие документы необходимы для&nbsp;оформления.
-										</p>
-								</div>
-								</li>                
-								<li>
-								<button class="accordion" aria-controls="section-3">
-										<span class="secondary-title button-name" role="heading" aria-level="3">
-												Какой срок востребования выигрыша?
-										</span>
-										<span class="cross"></span>
-								</button>
-								<div class="panel" id="section-3">
-										<p class="text faq-text">
-												Срок востребования выигрыша&nbsp;-&nbsp;180&nbsp;дней с момента проведения тиража.
-										</p>
-								</div>
-								</li>                
-								<li>
-								<button class="accordion" aria-controls="section-4">
-										<span class="secondary-title button-name" role="heading" aria-level="3">
-												Можно ли оплатить лотерейный билет и&nbsp;бонусами и&nbsp;деньгами?
-										</span>
-										<span class="cross"></span>
-								</button>
-								<div class="panel" id="section-4">
-										<p class="text faq-text">
-												Покупку лотерейного билета можно оплатить либо бонусами, либо деньгами.
-										</p>
-								</div>
-								</li>                             
-						</ul> 
-					</div>
-					<div class="decor">
-						<img class="wave" id="wave7" src="/assets/img/circle-wave.svg" aria-hidden="true">
-						<img class="wave" id="wave8" src="/assets/img/circle-wave.svg" aria-hidden="true">
-						<img class="wave" id="wave9" src="/assets/img/circle-wave.svg" aria-hidden="true">
-						<img class="wave" id="wave10" src="/assets/img/circle-wave.svg" aria-hidden="true">
-						<img class="wave" id="wave11" src="/assets/img/circle-wave.svg" aria-hidden="true">
-						<img class="wave" id="wave12" src="/assets/img/circle-wave.svg" aria-hidden="true">
-						<picture>
-							<source srcset="/assets/img/ball8-big.png">
-							<img class="faq-ball" src="/assets/img/ball8-big.webp" width="300" aria-hidden="true">
-						</picture>
-					</div>
-        </section>
-				<section class="section info">
-					<div class="wrapper">
-						<div class="section-title-wrapper">
-							<h2 class="title section-title">
-								Это важно знать:
-							</h2>
-						</div>
-						<ul class="list">
-							<li>
-								Согласно действующему законодательству РК, только совершеннолетние граждане имеют право на приобретение лотерейного билета.
-							</li>
-							<li>
-								Участниками лотереи могут быть как резиденты, так и нерезиденты Республики Казахстан.
-							</li>
-						</ul>
-						<p class="text social-resp">
-							<strong role="heading" aria-level="3">СОЦИАЛЬНАЯ ОТВЕТСТВЕННОСТЬ:</strong> 
-	10% от операционного игрового дохода перечисляется на&nbsp;развитие отечественного спорта. 10% от операционного игрового дохода перечисляется в&nbsp;Общественный&nbsp;Фонд «Қазақстан Халқына».
+	<main class="main">
+		<section class="visual container">
+			<div class="logo-wrapper">
+				<picture>
+					<source media="(min-width: 1024px)" width="270" srcset="/assets/img/ball3-big.png">
+					<source media="(min-width: 1024px)" width="270" srcset="/assets/img/ball3-big.webp" type="image/webp">
+					<source srcset="/assets/img/ball3.png">
+					<img src="/assets/img/ball3.webp" width="80" class="ball ball3" aria-hidden="true">
+				</picture>
+				<picture>
+					<source media="(min-width: 1024px)" width="140" srcset="/assets/img/ball5-big.png">
+					<source media="(min-width: 1024px)" width="140" srcset="/assets/img/ball5-big.webp" type="image/webp">
+					<source srcset="/assets/img/ball5.png">
+					<img src="/assets/img/ball5.webp" width="85" class="ball ball5" aria-hidden="true">
+				</picture>
+				<picture>
+					<source media="(min-width: 1024px)" width="110" srcset="/assets/img/ball8-big.png">
+					<source media="(min-width: 1024px)" width="110" srcset="/assets/img/ball8-big.webp" type="image/webp">
+					<source srcset="/assets/img/ball8.png">
+					<img src="/assets/img/ball8.webp" width="57" class="ball ball8" aria-hidden="true">
+				</picture>
+				<picture>
+					<source media="(min-width: 1024px)" width="220" srcset="/assets/img/ball5-big.png">
+					<source media="(min-width: 1024px)" width="220" srcset="/assets/img/ball5-big.webp" type="image/webp">
+					<source srcset="/assets/img/ball5.png">
+					<img src="/assets/img/ball5.webp" width="0" height="0" class="ball ball5-a" aria-hidden="true">
+				</picture>
+				<picture>
+					<source media="(min-width: 1024px)" width="460" srcset="/assets/img/wave-big.svg">
+					<img class="wave" id="wave1" src="/assets/img/wave.svg" width="242" aria-hidden="true">
+				</picture>
+				<picture>
+					<source media="(min-width: 1024px)" width="460" srcset="/assets/img/wave-big.svg">
+					<img class="wave" id="wave2" src="/assets/img/wave.svg" width="242" aria-hidden="true">
+				</picture>
+				<picture>
+					<source media="(min-width: 1024px)" width="460" srcset="/assets/img/wave-big.svg">
+					<img class="wave" id="wave3" src="/assets/img/wave.svg" width="242" aria-hidden="true">
+				</picture>
+				<picture>
+					<source media="(min-width: 1024px)" width="460" srcset="/assets/img/wave-big.svg">
+					<img class="wave" id="wave4" src="/assets/img/wave.svg" width="242" aria-hidden="true">
+				</picture>
+				<picture>
+					<source media="(min-width: 1024px)" width="460" srcset="/assets/img/wave-big.svg">
+					<img class="wave" id="wave5" src="/assets/img/wave.svg" width="242" aria-hidden="true">
+				</picture>
+				<picture>
+					<source media="(min-width: 1024px)" width="313" srcset="/assets/img/shield-big.webp" type="image/webp">
+					<source media="(min-width: 1024px)" width="313" srcset="/assets/img/shield-big.png">
+					<source srcset="/assets/img/shield.png">
+					<img src="/assets/img/shield.webp" width="180" alt="тираж номер 662" class="landing-shield">
+				</picture>
+				<picture>
+					<source media="(min-width: 1024px)" width="460" srcset="/assets/img/Logo-big.webp" type="image/webp">
+					<source media="(min-width: 1024px)" width="460" srcset="/assets/img/Logo-big.png">
+					<source srcset="/assets/img/Logo.png">
+					<img src="/assets/img/Logo.webp" width="242" alt="LOTO 4/20" class="landing-logo">
+				</picture>
+			</div>
+		</section>
+		<section class="hero accent">
+			<picture>
+				<source media="(min-width: 1024px)" width="180" srcset="/assets/img/ball8-big.webp" type="image/webp">
+				<source media="(min-width: 1024px)" width="180" srcset="/assets/img/ball8-big.png" type="image/png">
+				<img class="ball ball8" src="/assets/img/ball8.png" width="0" height="0" aria-hidden="true">
+			</picture>
+			<div class="decor">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span class="start-point"></span>
+			</div>
+			<div class="container">
+				<h1 class="title main-title">
+					БЕСПРОИГРЫШНЫЙ ТИРАЖ 4/20
+				</h1>
+				<p class="text hero-descr">
+					<time datetime="">23 октября 2023</time> проводим <strong>БЕСПРОИГРЫШНЫЙ ТИРАЖ</strong>.<br>Все билеты,
+					участвующие в тираже получат&nbsp;выигрыш.
+				</p>
+			</div>
+			<div class="decor">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span class="start-point"></span>
+			</div>
+		</section>
+		<section class="terms container">
+			<picture>
+				<source media="(min-width: 1024px)" width="169" srcset="/assets/img/ball5-big.webp" type="image/webp">
+				<source media="(min-width: 1024px)" width="169" srcset="/assets/img/ball5-big.png" type="image/png">
+				<img class="ball" src="/assets/img/ball5.png" width="0" height="0" aria-hidden="true">
+			</picture>
+			<h2 class="title">
+				УСЛОВИЯ АКЦИИ:
+			</h2>
+			<ul class="list">
+				<li>Купите билет 4/20&nbsp;на 577&nbsp;тираж, <time datetime="">23&nbsp;октября</time>.</li>
+				<li>Больше билетов, больше выигрышей!</li>
+			</ul>
+			<a href="#" class="link buy-btn">Купить билет</a>
+		</section>
+		<section class="info container">
+			<h2 class="title">
+				ЭТО ВАЖНО ЗНАТЬ:
+			</h2>
+			<ul class="list">
+				<li>Согласно действующему законодательству&nbsp;РК, только совершеннолетние граждане имеют право
+					на&nbsp;приобретение лотерейного билета.</li>
+				<li>Участниками лотереи могут быть как резиденты, так и&nbsp;нерезиденты Республики Казахстан.</li>
+			</ul>
+		</section>
+		<section class="frequently-asked accent">
+			<div class="decor">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span class="start-point"></span>
+			</div>
+			<ul class="list faq-list container">
+				<li>
+					<button type="button" class="acc" aria-controls="panel1">
+						Нужно&nbsp;ли регистрировать билеты для участия беспроигрышном тираже?
+					</button>
+					<div class="panel" id="panel1">
+						<p class="text">
+							Для участия в&nbsp;беспроигрышном тираже регистрация не&nbsp;требуется.
 						</p>
 					</div>
-				</section>
-    </main>  
-		<script src="/js/accordeon.js"></script>  
+				</li>
+				<li>
+					<button type="button" class="acc" aria-controls="panel2">
+						Как получить выигрыш?
+					</button>
+					<div class="panel" id="panel2">
+						<p class="text">
+							Вам необходимо обраться в&nbsp;контакт-центр по&nbsp;тел.&nbsp;<a href="tel:+78000805200"
+								title="позвонить">8&nbsp;800&nbsp;080 52&nbsp;00</a>, где вам подскажут, где получить выигрыш
+							и&nbsp;какие документы необходимы для
+							оформления.
+						</p>
+					</div>
+				</li>
+				<li>
+					<button type="button" class="acc" aria-controls="panel3">
+						Нужно&nbsp;ли регистрировать билеты для участия беспроигрышном тираже?
+					</button>
+					<div class="panel" id="panel3">
+						<p class="text">
+							Для участия в&nbsp;беспроигрышном тираже регистрация не&nbsp;требуется.
+						</p>
+					</div>
+				</li>
+				<li>
+					<button type="button" class="acc" aria-controls="panel4">
+						Нужно&nbsp;ли регистрировать билеты для участия беспроигрышном тираже?
+					</button>
+					<div class="panel" id="panel4">
+						<p class="text">
+							Для участия в&nbsp;беспроигрышном тираже регистрация не&nbsp;требуется.
+						</p>
+					</div>
+				</li>
+				<li>
+					<button type="button" class="acc" aria-controls="panel5">
+						Нужно&nbsp;ли регистрировать билеты для участия беспроигрышном тираже?
+					</button>
+					<div class="panel" id="panel5">
+						<p class="text">
+							Для участия в&nbsp;беспроигрышном тираже регистрация не&nbsp;требуется.
+						</p>
+					</div>
+				</li>
+			</ul>
+			<div class="decor">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span class="start-point"></span>
+			</div>
+		</section>
+		<section class="social-resp container">
+			<h2 class="title">СОЦИАЛЬНАЯ ОТВЕТСТВЕННОСТЬ:</h2>
+			<p class="text">
+				10%&nbsp;от&nbsp;операционного игрового дохода перечисляется на&nbsp;развитие отечественного спорта.
+				10%&nbsp;от&nbsp;операционного игрового дохода перечисляется в&nbsp;Общественный Фонд &laquo;Қазақстан
+				Халқына&raquo;.
+			</p>
+		</section>
+	</main>
+	<script src="/js/accordeon.js"></script>
 </body>
+
 </html>

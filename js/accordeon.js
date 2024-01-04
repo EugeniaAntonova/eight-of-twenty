@@ -1,22 +1,41 @@
 const faqList = document.querySelector('.faq-list');
-const panels = document.querySelectorAll('.panel');
-const accordeonControls = document.querySelectorAll('.accordion');
-const crosses = document.querySelectorAll('.cross');
+const accordeonControls = document.querySelectorAll('.acc');
 
-crosses[0].classList.add('cross-close');
+const PADDING = screen.width < 1024 ? 40 : 50;
 
-for (let i = 1; i < panels.length; i++) {
-  panels[i].style.maxHeight = 'auto';
-  panels[i].classList.add('panel-close');
+const findMyPanel = (item) => {
+  let id = item.getAttribute('aria-controls');
+  let panel = faqList.querySelector(`#${id}`);
+  return panel;
 }
 
-accordeonControls.forEach((control) => {
-  control.addEventListener("click", (evt) => {
-   let panel = document.getElementById(control.getAttribute("aria-controls"));
-   let cross = evt.target.querySelector('.cross');
-   panels.forEach((p) => {if (p !== panel) p.classList.add('panel-close')});
-   crosses.forEach((c) => {if (c !== cross) c.classList.remove('cross-close')});
-    panel.classList.toggle('panel-close')
-    cross.classList.toggle('cross-close');
-  })
+accordeonControls.forEach((acc) => {
+  acc.classList.add('acc-closed');
+  let panel = findMyPanel(acc);
+  panel.style.maxHeight = '0';
 })
+
+faqList.addEventListener("click", (evt) => {
+  let item = evt.target.classList.contains('acc') ? evt.target : false;
+  console.log(item);
+  let opened = faqList.querySelector('.acc-opened');
+	if (item) {
+		if (opened) {
+			if (opened != item) {
+      let panel = findMyPanel(opened);
+			opened.classList.add('acc-closed');
+			opened.classList.remove('acc-opened');
+      panel.style.maxHeight = '0';
+			}
+		}
+    let panel = findMyPanel(item);
+		item.classList.toggle('acc-closed');
+		item.classList.toggle('acc-opened');
+    if (item.classList.contains('acc-closed')) {
+      panel.style.maxHeight = '0';
+    } else {
+       panel.style.maxHeight = `${panel.scrollHeight + PADDING}px`;
+    }
+	}
+})
+
