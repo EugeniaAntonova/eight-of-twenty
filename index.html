@@ -6,31 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="/css/index-style.css">
-	<!-- <link rel="stylesheet" href="/css/style.css"> -->
-	<style>
-		section.hero {
-			position: relative;
-		}
-		section.hero .ball {
-			position: absolute;
-			top: 30%;
-			left: -2%;
-		}
-
-		section.terms {
-			position: relative;
-		}
-
-		section.terms .ball {
-			position: absolute;
-			top: 20%;
-			right: -30%;
-		}
-
-		@media (min-width: 1024px) {
-
-		}
-	</style>
 </head>
 
 <body>
@@ -112,7 +87,8 @@
 					БЕСПРОИГРЫШНЫЙ ТИРАЖ 4/20
 				</h1>
 				<p class="text hero-descr">
-					<time datetime="">23 октября 2023</time> проводим <strong>БЕСПРОИГРЫШНЫЙ ТИРАЖ</strong>.<br>Все билеты,
+					<time datetime="2024-01-16">16 января 2024</time> проводим <strong>БЕСПРОИГРЫШНЫЙ ТИРАЖ</strong>.<br>Все
+					билеты,
 					участвующие в тираже получат&nbsp;выигрыш.
 				</p>
 			</div>
@@ -133,12 +109,20 @@
 				УСЛОВИЯ АКЦИИ:
 			</h2>
 			<ul class="list">
-				<li>Купите билет 4/20&nbsp;на 577&nbsp;тираж, <time datetime="">23&nbsp;октября</time>.</li>
-				<li>Больше билетов, больше выигрышей!</li>
+				<li>Купите билет 4/20&nbsp;на 662&nbsp;тираж, <time datetime="2023-01-16">16&nbsp;января</time>.</li>
+				<li>В&nbsp;тираже все билеты выигрышные!</li>
 			</ul>
 			<a href="#" class="link buy-btn">Купить билет</a>
 		</section>
 		<section class="info container">
+			<div class="decor" aria-hidden="true">
+				<img class="waves" src="/assets/img/Ripple.svg">
+				<picture>
+					<source media="(min-width: 1024px)" width="120" srcset="/assets/img/ball3-big.webp" type="image/webp">
+					<source media="(min-width: 1024px)" width="120" srcset="/assets/img/ball3-big.png" type="image/png">
+					<img class="ball" src="/assets/img/ball3.png" width="0" height="0" aria-hidden="true">
+				</picture>
+			</div>
 			<h2 class="title">
 				ЭТО ВАЖНО ЗНАТЬ:
 			</h2>
@@ -155,14 +139,28 @@
 				<span></span>
 				<span class="start-point"></span>
 			</div>
+			<div class="decor-ball" aria-hidden="true">
+				<img class="waves" src="/assets/img/Ripple-accent.svg">
+				<picture>
+					<source media="(min-width: 1024px)" width="130" srcset="/assets/img/ball8-big.webp" type="image/webp">
+					<source media="(min-width: 1024px)" width="130" srcset="/assets/img/ball8-big.png" type="image/png">
+					<img class="ball" src="/assets/img/ball8.png" width="0" height="0" aria-hidden="true">
+				</picture>
+			</div>
+			<picture>
+				<source media="(min-width: 1024px)" width="240" srcset="/assets/img/ball3-big.webp" type="image/webp">
+				<source media="(min-width: 1024px)" width="240" srcset="/assets/img/ball3-big.png" type="image/png">
+				<img class="ball" src="/assets/img/ball3.png" width="0" height="0" aria-hidden="true">
+			</picture>
+			<h2 class="title">Отвечаем на вопросы</h2>
 			<ul class="list faq-list container">
 				<li>
 					<button type="button" class="acc" aria-controls="panel1">
-						Нужно&nbsp;ли регистрировать билеты для участия беспроигрышном тираже?
+						Что такое беспроигрышный тираж?
 					</button>
 					<div class="panel" id="panel1">
 						<p class="text">
-							Для участия в&nbsp;беспроигрышном тираже регистрация не&nbsp;требуется.
+							Беспроигрышный тираж&nbsp;&mdash; это тираж, в&nbsp;котором каждый билет является выигрышным.
 						</p>
 					</div>
 				</li>
@@ -172,40 +170,46 @@
 					</button>
 					<div class="panel" id="panel2">
 						<p class="text">
-							Вам необходимо обраться в&nbsp;контакт-центр по&nbsp;тел.&nbsp;<a href="tel:+78000805200"
-								title="позвонить">8&nbsp;800&nbsp;080 52&nbsp;00</a>, где вам подскажут, где получить выигрыш
-							и&nbsp;какие документы необходимы для
-							оформления.
+						<p>
+							Если сумма выигрышей не&nbsp;превышает 22&nbsp;152&nbsp;тенге&nbsp;(6&nbsp;МРП), то&nbsp;выигрыши будут
+							начислены в&nbsp;«Кошелек» вашего Личного Кабинета.
+							<br>
+							<br> Если сумма выигрышей от&nbsp;22&nbsp;152&nbsp;тенге&nbsp;(6&nbsp;МРП)
+							до&nbsp;250&nbsp;000&nbsp;тенге, то&nbsp;выигрыши будут начислены в&nbsp;«Кошелек» вашего Личного
+							Кабинета, при&nbsp;условии, что&nbsp;вы&nbsp;полностью
+							заполните
+							<a href="/login?back=profile" class="link">Профиль</a>. Выигрыши свыше&nbsp;6&nbsp;МРП облагаются налогом
+							(10%&nbsp;для&nbsp;резидентов&nbsp;РК
+							и&nbsp;20%&nbsp;для&nbsp;нерезидентов).
+							<br>
+							<br>
+							Для суммы выигрышей свыше 250&nbsp;000&nbsp;тенге,
+							необходимо обратиться в&nbsp;региональное представительство
+							национальной лотереи «Сәтті&nbsp;Жұлдыз», либо
+							в&nbsp;головной офис компании в&nbsp;Алматы. Выигрыш
+							выплачивается только безналичным расчетом на&nbsp;карт-счет
+							(IBAN) победителя.
+						</p>
 						</p>
 					</div>
 				</li>
 				<li>
 					<button type="button" class="acc" aria-controls="panel3">
-						Нужно&nbsp;ли регистрировать билеты для участия беспроигрышном тираже?
+						Какой срок востребования выигрыша?
 					</button>
 					<div class="panel" id="panel3">
 						<p class="text">
-							Для участия в&nbsp;беспроигрышном тираже регистрация не&nbsp;требуется.
+							Срок востребования выигрыша&nbsp;&mdash; 180 дней	с&nbsp;момента проведения тиража.
 						</p>
 					</div>
 				</li>
 				<li>
 					<button type="button" class="acc" aria-controls="panel4">
-						Нужно&nbsp;ли регистрировать билеты для участия беспроигрышном тираже?
+						Можно&nbsp;ли оплатить лотерейный билет и&nbsp;бонусами и&nbsp;деньгами?
 					</button>
 					<div class="panel" id="panel4">
 						<p class="text">
-							Для участия в&nbsp;беспроигрышном тираже регистрация не&nbsp;требуется.
-						</p>
-					</div>
-				</li>
-				<li>
-					<button type="button" class="acc" aria-controls="panel5">
-						Нужно&nbsp;ли регистрировать билеты для участия беспроигрышном тираже?
-					</button>
-					<div class="panel" id="panel5">
-						<p class="text">
-							Для участия в&nbsp;беспроигрышном тираже регистрация не&nbsp;требуется.
+							Покупку лотерейного билета можно оплатить либо бонусами, либо деньгами.
 						</p>
 					</div>
 				</li>

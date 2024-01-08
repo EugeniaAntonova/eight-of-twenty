@@ -96,7 +96,7 @@ body .main section .title {
 	display: block;
 }
 
-/* ====================================  accent section */
+/* ==================================== accent section */
 
 section.accent {
 	margin-bottom: 64px;
@@ -134,10 +134,11 @@ section.accent .decor span {
 	height: 1px;
 	background-color: white;
 	position: absolute;
-	top: -15px;
+	/* top: -15px; */
+	top: 0;
 }
 
-section.accent .decor span:not(.start-point) {
+section.accent .decor span {
 	transition: opacity .5s ease-out, transform .5s ease-out;
 	animation-name: fly-away;
 	animation-duration: 2.4s;
@@ -255,6 +256,17 @@ section.accent .decor span:nth-of-type(3) {
 	text-transform: uppercase;
 }
 
+
+section.hero {
+	position: relative;
+}
+
+section.hero .ball {
+	position: absolute;
+	top: 30%;
+	left: -2%;
+}
+
 /* ======================================================  terms & info */
 
 section.terms,
@@ -269,7 +281,7 @@ section.info {
 }
 
 section.terms .title,
-section.terms .title {
+section.info .title {
 	text-align: center;
 }
 
@@ -369,6 +381,10 @@ a.link.buy-btn:active {
 
 /* ================================================================= faq */
 
+section.frequently-asked .title {
+	text-align: center;
+}
+
 section.frequently-asked button.acc {
 	background: transparent;
 	border: none;
@@ -379,6 +395,8 @@ section.frequently-asked button.acc {
 }
 
 section.frequently-asked ul.list {
+	position: relative;
+	z-index: 2;
 	margin: 0;
 	padding: 0 15px;
 	list-style: none;
@@ -447,6 +465,15 @@ section.frequently-asked ul.list li .panel {
 	padding: 20px 15px;
 }
 
+.frequently-asked a.link {
+	color: inherit;
+	transition: color .3s ease-in-out;
+}
+
+.frequently-asked a.link:hover {
+	color: var(--secondary);
+}
+
 /* ======================================================= social resp */
 
 .social-resp {
@@ -464,6 +491,66 @@ section.social-resp .text {
 	line-height: 120%;
 	font-weight: 500;
 	text-align: center;
+}
+
+/* ====================================================== decorative balls */
+
+section.terms {
+	position: relative;
+}
+
+section.terms .ball {
+	position: absolute;
+	top: 20%;
+	right: -30%;
+}
+
+section.info {
+	position: relative;
+}
+
+section.info .decor {
+	display: none;
+	position: absolute;
+	top: 25%;
+	left: -30%;
+}
+
+section.info .decor .waves {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+section.info .decor .ball {
+	position: relative;
+	z-index: 2;
+}
+
+section.frequently-asked .decor-ball {
+	display: none;
+	position: absolute;
+	top: 250px;
+	right: 180px;
+}
+
+section.frequently-asked .decor-ball .waves {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+section.frequently-asked .decor-ball .ball {
+	position: relative;
+	z-index: 2;
+}
+
+section.frequently-asked > picture img.ball {
+	position: absolute;
+	top: 50px;
+	left: -40px;
 }
 
 @media (min-width: 1024px) {
@@ -582,6 +669,10 @@ section.social-resp .text {
 
 	/* faq */
 
+	body .main section.frequently-asked .title {
+		font-size: 50px;
+	}
+
 	section.frequently-asked ul.list li .acc,
 	section.frequently-asked ul.list li .panel {
 		font-size: 20px;
@@ -604,6 +695,12 @@ section.social-resp .text {
 	section.social-resp h2.title,
 	section.social-resp .text {
 		font-size: 24px;		
+	}
+
+	/* decorative balls */
+	section.info .decor,
+	section.frequently-asked .decor-ball {
+		display: block;
 	}
 }
 
